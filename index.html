@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Akash Public School - Excellence in Education Since 2010</title>
+  <meta name="description" content="Akash Public School in Lucknow offers world-class education with state-of-the-art facilities, experienced faculty, and a holistic approach to learning.">
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header Component -->
+  <div id="header-placeholder"></div>
+
+  <!-- Hero Section -->
+  <div id="hero-placeholder"></div>
+
+  <!-- Quick Facts -->
+  <section class="quick-facts">
+    <div class="container">
+      <div class="fact-item">
+        <i class="fas fa-users"></i>
+        <div>
+          <h3>1200+</h3>
+          <p>Students</p>
+        </div>
+      </div>
+      <div class="fact-item">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <div>
+          <h3>75+</h3>
+          <p>Qualified Teachers</p>
+        </div>
+      </div>
+      <div class="fact-item">
+        <i class="fas fa-trophy"></i>
+        <div>
+          <h3>90+</h3>
+          <p>Awards Won</p>
+        </div>
+      </div>
+      <div class="fact-item">
+        <i class="fas fa-graduation-cap"></i>
+        <div>
+          <h3>100%</h3>
+          <p>Pass Percentage</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <div id="about-placeholder"></div>
+
+  <!-- Academics Section -->
+  <div id="academics-placeholder"></div>
+
+  <!-- Facilities Section -->
+  <div id="facilities-placeholder"></div>
+
+  <!-- Admissions Section -->
+  <div id="admissions-placeholder"></div>
+
+  <!-- Gallery Section -->
+  <div id="gallery-placeholder"></div>
+
+  <!-- Testimonials Section -->
+  <div id="testimonials-placeholder"></div>
+
+  <!-- Contact Section -->
+  <div id="contact-placeholder"></div>
+
+  <!-- Map Section -->
+  <div id="map-placeholder"></div>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Quick Contact -->
+  <div class="quick-contact">
+    <a href="tel:+919876543210" class="quick-btn phone">
+      <i class="fas fa-phone"></i>
+    </a>
+    <a href="mailto:info@akashpublicschool.edu" class="quick-btn email">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="#contact" class="quick-btn enquiry">
+      <i class="fas fa-question"></i>
+    </a>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Load components
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header', 'header-placeholder');
+      loadComponent('hero', 'hero-placeholder');
+      loadComponent('about', 'about-placeholder');
+      loadComponent('academics', 'academics-placeholder');
+      loadComponent('facilities', 'facilities-placeholder');
+      loadComponent('admissions', 'admissions-placeholder');
+      loadComponent('gallery', 'gallery-placeholder');
+      loadComponent('testimonials', 'testimonials-placeholder');
+      loadComponent('contact', 'contact-placeholder');
+      loadComponent('map', 'map-placeholder');
+      loadComponent('footer', 'footer-placeholder');
+      
+      // Initialize slider and other JS functionality
+      initSlider();
+      initTabs();
+      initGallery();
+    });
+
+    function loadComponent(componentName, placeholderId) {
+      fetch(`components/${componentName}.html`)
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById(placeholderId).innerHTML = html;
+        })
+        .catch(err => console.error(`Error loading ${componentName}:`, err));
+    }
+  </script>
+</body>
+</html>
